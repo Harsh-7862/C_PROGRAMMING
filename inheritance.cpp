@@ -35,3 +35,30 @@ d.bark();
 
     return 0;
 }
+
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// class A
+// { public:
+//     void show(){cout<<"Showing A"<<endl ;}
+// };
+// class B
+// {public:
+//     void show(){cout<<"Showing B"<<endl ;}
+// };
+// class C : public A, public B
+// {
+// };
+// int main()
+// {
+// C ob;
+// ob.B::show();
+// ob.A::show();
+
+//     return 0;
+// }
