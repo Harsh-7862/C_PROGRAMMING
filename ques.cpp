@@ -21,8 +21,6 @@ class A
 
 int main()
 {
-
-    
 A ob1;
 *(ob1.p)=25;
 ob1.show();
