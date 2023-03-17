@@ -11,7 +11,7 @@ class A
     }
     
 
-        A(A& ob){//used for deep copy
+        A(A& ob){//used for deep copy ,for deep copy we need to make our own copy constructor
             p= new int;
             *p=*(ob.p);
                 }//till this .
