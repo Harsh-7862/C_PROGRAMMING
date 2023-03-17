@@ -36,7 +36,7 @@ ob1.show();
 A ob2 = ob1;
 ob2.show();
 
-*(ob1.p)=45;
+*(ob1.p)=45;// deep starts from here
 ob1.show();
 ob2.show();
 
