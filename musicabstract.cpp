@@ -1,3 +1,5 @@
+//abstraction concepts for learning virtual class elements.
+
 #include<iostream>
 using namespace std;
 
@@ -12,7 +14,7 @@ using namespace std;
         class MusicDevice : public Music{
                
                public:
-                void bass(){cout<<"Extra Bass...."<<endl;}
+                void bass(){cout<<"Bass...."<<endl;}
             };
 
         class MusicPlayer
