@@ -64,3 +64,33 @@ cout <<x<<endl<< y<<endl;
     return 0;
 }
 
+
+
+
+
+//question by sir error eonst with int &a
+#include<iostream>
+using namespace std;
+void fun( int &a){
+    a=20;
+}
+
+
+int main(){
+    int x=15;
+    fun(x);
+cout<<x;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
