@@ -9,7 +9,16 @@ class A
     A(){
         p= new int;
     }
-    void show(){cout<<"Data : "<<*p<<endl;}
+    
+
+        A(A& ob){//used for deep copy
+            p= new int;
+            *p=*(ob.p);
+                }//till this .
+            void show(){cout<<"Data : "<<*p<<endl;}
+
+
+
 };
 
 // class B : public A
@@ -26,6 +35,12 @@ A ob1;
 ob1.show();
 A ob2 = ob1;
 ob2.show();
+
+*(ob1.p)=45;
+ob1.show();
+ob2.show();
+
+
    // return 0;
 }
           
