@@ -11,5 +11,7 @@ throw
   // code to be executed.
 }
 ```
-### final vs finally vs finalised ( constant -/ block - / function-)
+ final vs finally vs finalised ( constant -/ block - / function-)
 
+### Exception propagation 
+ 
