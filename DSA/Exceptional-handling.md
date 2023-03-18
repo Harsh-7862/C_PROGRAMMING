@@ -12,6 +12,3 @@ throw
 }
 ```
  final vs finally vs finalised ( constant -/ block - / function-)
-
-### Exception propagation 
- 
