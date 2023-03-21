@@ -8,6 +8,7 @@ struct Node
 Node * create(int x);
 Node * insert_end(Node *head, int x); // formal parameter
 Node * delete_end(Node*head);
+Node*delete_beg(Node*head);
 Node * insert_beg(Node*head,int x);
 void display(Node*head);
 
@@ -28,7 +29,12 @@ int main()
     // display(head);
    head=insert_beg(head,5);
    display(head);
-
+    head=insert_beg(head,15);
+    display(head);
+   head=insert_end(head,60);
+   display(head);
+   head=delete_beg(head);
+   display(head);
 
 }
 
@@ -92,7 +98,7 @@ delete t->next;
 t->next=NULL;
 return head;
 }
-Node * insert_beg(Node*head,int x){
+Node * insert_beg(Node*head,int x){//insertion of element from begining 
          Node*nptr=create(x);
         nptr ->next=head;
         head=nptr;
@@ -100,4 +106,16 @@ Node * insert_beg(Node*head,int x){
 
 
 }
+
+Node*delete_beg(Node*head){//delete element at beginning
+       if(!head){
+
+return head;
+       }
+       if(!(head->next)){
+        cout<<head->data;
+        delete head;
+        return NULL;
+            }
+            }
 
