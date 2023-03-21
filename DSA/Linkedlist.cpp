@@ -8,6 +8,7 @@ struct Node
 Node * create(int x);
 Node * insert_end(Node *head, int x); // formal parameter
 Node * delete_end(Node*head);
+Node * insert_beg(Node*head,int x);
 void display(Node*head);
 
 
@@ -23,20 +24,23 @@ int main()
     // display(head);
     // head=insert_end(head,40);
     // display(head);
-    head=delete_end(head);
-    display(head);
+    // head=delete_end(head);
+    // display(head);
+   head=insert_beg(head,5);
+   display(head);
+
 
 }
 
 
-Node * create(int x)
+Node * create(int x)//node creation
 {
 Node * nptr = new Node();
 nptr -> data=x;
 nptr -> next=NULL;
 return nptr;
 }
-Node *insert_end(Node*head,int x){
+Node *insert_end(Node*head,int x){//element insertion at end
     Node*nptr=create(x);
     if(!head){
 head=nptr;
@@ -50,7 +54,7 @@ t=t ->next;
 }t ->next=nptr;
 return head;
 }
-
+//display function
 void display(Node*head){
     if(!head){
         cout<<"List empty"<<endl;
@@ -63,7 +67,7 @@ void display(Node*head){
         head=head ->next;
     }cout<<endl;//it was mistakenly not written//it will change line for every additional row elements
 }
-Node*delete_end(Node*head){
+Node*delete_end(Node*head){//node last element deletion
 
 
  if(!head){
@@ -87,5 +91,13 @@ cout<<"Deleted item :"<<head ->data<<endl;
 delete t->next;
 t->next=NULL;
 return head;
+}
+Node * insert_beg(Node*head,int x){
+         Node*nptr=create(x);
+        nptr ->next=head;
+        head=nptr;
+        return head;
+
 
 }
+
