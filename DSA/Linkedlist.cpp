@@ -17,12 +17,12 @@ int main()
    // insert_end(head, 10); // actual parameter
     head=insert_end(head,10);
     display(head);
-    head=insert_end(head,20);
-    display(head);
-    head=insert_end(head,30);
-    display(head);
-    head=insert_end(head,40);
-    display(head);
+    // head=insert_end(head,20);
+    // display(head);
+    // head=insert_end(head,30);
+    // display(head);
+    // head=insert_end(head,40);
+    // display(head);
     head=delete_end(head);
     display(head);
 
@@ -73,7 +73,7 @@ Node*delete_end(Node*head){
     }
 
 if(!(head -> next)){
-cout<<"Deleted item :"<<head ->data<<endl;
+cout<<"No Node found to delete "<<endl;
 delete head;
 return NULL;
 
