@@ -23,7 +23,7 @@ int main()
     display(head);
     head=insert_end(head,40);
     display(head);
-    head=delete_end(head,40);
+    head=delete_end(head);
     display(head);
 
 }
