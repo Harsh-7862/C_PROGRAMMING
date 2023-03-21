@@ -11,6 +11,9 @@ Node *delete_end(Node *head);
 Node *delete_beg(Node *head);
 Node *insert_beg(Node *head, int x);
 void display(Node *head);
+Node *searchNode(Node *head, int x);
+void*insert_after(Node *head,int data,int x);
+
 
 int main()
 {
@@ -26,18 +29,30 @@ int main()
     // display(head);
     // head=delete_end(head);
     // display(head);
-    head = insert_beg(head, 5);
-    display(head);
     head = insert_beg(head, 15);
+    display(head);
+    head = insert_beg(head, 5);
     display(head);
     head = insert_end(head, 60);
     display(head);
-    head = delete_end(head);
+    // head = delete_end(head);
+    // display(head);
+    // head = delete_end(head);
+    // display(head);
+    // head = delete_end(head);
+    // display(head);
+    Node *pos = searchNode(head, 15);
+    if (!pos)
+    {
+        cout << "Node not found";
+    }
+    else
+    {
+        cout << "found"<<endl;
+    }
+    insert_after(head,25,15);//(head,value want to add,node after whih you want to add)
     display(head);
-    head = delete_end(head);
-    display(head);
-    head = delete_end(head);
-    display(head);
+
 }
 
 Node *create(int x) // node creation
@@ -101,7 +116,7 @@ Node *delete_end(Node *head)
     {
         t = t->next;
     }
-    cout << "Deleted item :" <<t-> next -> data << endl;
+    cout << "Deleted item :" << t->next->data << endl;
 
     delete t->next;
     t->next = NULL;
@@ -134,3 +149,22 @@ Node *delete_beg(Node *head)
     delete t;
     return head;
 }
+Node *searchNode(Node *head, int x) // searching node
+{
+    while (head)
+    {
+        if ((head->data) == x)
+            return head;
+            head=head->next;
+    }
+    return NULL;
+}
+void*insert_after(Node *head,int data,int x){//insert after node
+        Node*pos=searchNode(head,x);
+        if(!pos){
+            cout<<"node not found"<<endl;
+            return head;
+        }    Node*nptr=create(data);
+        nptr->next=pos->next;
+        pos->next=nptr;
+        }
