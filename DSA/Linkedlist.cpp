@@ -7,6 +7,7 @@ struct Node
 };
 Node * create(int x);
 Node * insert_end(Node *head, int x); // formal parameter
+Node * delete_end(Node*head);
 void display(Node*head);
 
 
@@ -22,7 +23,8 @@ int main()
     display(head);
     head=insert_end(head,40);
     display(head);
-
+    head=delete_end(head,40);
+    display(head);
 
 }
 
@@ -60,4 +62,30 @@ void display(Node*head){
        // cout<<endl;
         head=head ->next;
     }cout<<endl;//it was mistakenly not written//it will change line for every additional row elements
+}
+Node*delete_end(Node*head){
+
+
+ if(!head){
+        cout<<"List empty"<<endl;
+        
+        return head;
+    }
+
+if(!(head -> next)){
+cout<<"Deleted item :"<<head ->data<<endl;
+delete head;
+return NULL;
+
+}
+Node*t=head;
+while(t->next->next){
+    t=t->next;
+}
+cout<<"Deleted item :"<<head ->data<<endl;
+
+delete t->next;
+t->next=NULL;
+return head;
+
 }
