@@ -13,6 +13,7 @@ Node *insert_beg(Node *head, int x);
 void display(Node *head);
 Node *searchNode(Node *head, int x);
 void*insert_after(Node *head,int data,int x);
+void * rev_Show(Node *head);
 
 
 int main()
@@ -50,8 +51,11 @@ int main()
     {
         cout << "found"<<endl;
     }
+    
     insert_after(head,25,15);//(head,value want to add,node after whih you want to add)
     display(head);
+    rev_Show(head);
+    
 
 }
 
@@ -168,3 +172,13 @@ void*insert_after(Node *head,int data,int x){//insert after node
         nptr->next=pos->next;
         pos->next=nptr;
         }
+
+
+        
+void * rev_Show(Node *head){//reversing the linked list
+    if (head){
+                rev_Show(head->next);
+                cout<<head->data<<" ";
+
+    }
+}
