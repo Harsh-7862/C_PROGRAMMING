@@ -32,11 +32,11 @@ int main()
     display(head);
     head = insert_end(head, 60);
     display(head);
-    head = delete_beg(head);
+    head = delete_end(head);
     display(head);
-    head = delete_beg(head);
+    head = delete_end(head);
     display(head);
-    head = delete_beg(head);
+    head = delete_end(head);
     display(head);
 }
 
@@ -92,7 +92,7 @@ Node *delete_end(Node *head)
 
     if (!(head->next))
     {
-        cout << "No Node found to delete " << endl;
+        cout << "Deleted item :" << head->data << endl;
         delete head;
         return NULL;
     }
@@ -101,7 +101,7 @@ Node *delete_end(Node *head)
     {
         t = t->next;
     }
-    cout << "Deleted item :" << head->data << endl;
+    cout << "Deleted item :" <<t-> next -> data << endl;
 
     delete t->next;
     t->next = NULL;
