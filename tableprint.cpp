@@ -7,9 +7,7 @@ int n;
   cout<<endl;
   for(int i=1;i<=10;i++)
   {
-  cout<<i*n<<" ";
+  cout<<n*i<<" ";
   }
-  
-  
 return 0;
 }

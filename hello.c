@@ -1,4 +1,7 @@
 #include<stdio.h>
-void main(){
-    printf("aman bhai");
+
+int main(){   //void main()
+   float a=10.04;
+   printf("%f",a);
+return 0;
 }

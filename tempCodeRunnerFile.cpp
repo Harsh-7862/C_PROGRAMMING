@@ -1,22 +1,4 @@
-#include<iostream>
-using namespace std;
-int main(){
-   int n=5;
-   for(int i=0;i<n;i++)
-{
-    
-    for(int k=1;k<n;k++)
-    {
-        if((i+k)>(n-1))
-        {
-            cout<<"*";
-        }
-        else
-        {
-            cout<<" ";
-        }
-    }
-//     for(int j=0;j<n;j++)
+for(int j=0;j<n;j++)
 //     {
 //         if(i>=j)
 //         {
@@ -53,7 +35,3 @@ int main(){
 //             cout<<" ";
 //         }
 //     }
-    cout<<endl;
-}
-    return 0;
-}
