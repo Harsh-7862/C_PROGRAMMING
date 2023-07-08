@@ -1,3 +1,4 @@
+//code for diamond patterns.
 #include<iostream>
 using namespace std;
 int main(){
