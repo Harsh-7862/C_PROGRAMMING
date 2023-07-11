@@ -9,7 +9,7 @@ int main()
    cout << "Enter number 2" << endl;
    cin >> num2;
 
-   cout << "Enter the operation for calculation" << endl;
+   cout << "Enter the operation for calculation (i.e + , - , / , * )" << endl;
    cin >> op;
    switch (op){
       case '+' :
