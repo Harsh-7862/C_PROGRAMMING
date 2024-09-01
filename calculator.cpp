@@ -31,4 +31,5 @@ int main()
 
    }
       return 0;
+   // calculator code using switch case
 }
