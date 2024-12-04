@@ -52,6 +52,7 @@
 
 //code 4
 
+
 #include<stdio.h>
 void solve(){
     int a=3;
